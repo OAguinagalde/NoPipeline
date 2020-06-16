@@ -1,3 +1,9 @@
+# This fork
+
+It's exactly the same as the original repository, only now it's a .Net Core application.
+
+----
+
 # NoPipeline
 
 ![NoPipeline](/pics/NoPipeline.png)
