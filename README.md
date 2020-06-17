@@ -1,6 +1,8 @@
 # This fork
 
-It's exactly the same as the original repository, only now it's a .Net Core application.
+It's ~~exactly the same as the original repository, only now it's~~ a .Net Core application instead.
+
+* (17/06/2020) Now it also fixes an issue regarding the usage of full paths instead of relative paths.
 
 ----
 
