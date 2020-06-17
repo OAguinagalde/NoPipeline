@@ -110,8 +110,8 @@ namespace NoPipeline
 				// Don't include if the file doesn't exist.
 				if (File.Exists(Path.Combine(rootPath, item.Path)))
 				{
-
-					DateTime itemLastModified = File.GetLastWriteTime(rootPath + item.Path);
+					// Using Path.Combine to prevent issues when one of the paths is a full path already
+					DateTime itemLastModified = File.GetLastWriteTime(Path.Combine(rootPath, item.Path));
 					
 					var relativeItemPath = Path.Combine(rootPath, Path.GetDirectoryName(item.Path));
 

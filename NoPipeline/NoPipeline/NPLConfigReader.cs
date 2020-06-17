@@ -76,7 +76,10 @@ namespace NoPipeline
 
 				foreach (var file in files)
 				{
-					var name = file.Remove(0, rootDir.Length).Replace('\\', '/');
+					// If the fail is already a valid and full path, we don't want to modify it.
+					string name = file;
+					if (!Path.IsPathRooted(file))
+						name = file.Remove(0, rootDir.Length).Replace('\\', '/');
 					var newItem = new Item(name);
 					
 					Console.WriteLine("    Reading " + name);
